@@ -21,6 +21,7 @@
                 <th>Nome da Cidade</th>
                 <th>Estado</th>
                 <th>Senha</th>
+                <th>Email</th>
                 <th>Alterar</th>
                 <th>Deletar</th>
             </tr>
@@ -31,6 +32,7 @@
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['estado']."</td>";
                 echo "<td>".$row['senha']."</td>";
+                echo "<td>".$row['email']."</td>";
                 echo "<td><a href='alteraCidade.php?id=".$row['id']."'>Alterar</a></td>";
                 echo "<td><a href='deletarCidade.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";

@@ -6,6 +6,7 @@
     $estado = $_POST['estado'];
     $senha = $_POST['senha'];
     $email = $_POST['email'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,18 +21,20 @@
     <h1>Alteração de cidade</h1>
     <button class="btn"><a href="./index.html">Voltar</a></button>
     <?php
-    echo "<p>Nome do Cliente: $nomec</p>";
+    echo "<p>Nome do cliente: $nomec</p>";
     echo "<p>Nome: $nome</p>";
     echo "<p>Estado: $estado</p>";
     echo "<p>Senha: $senha</p>";
     echo "<p>Email: $email</p>";
-    $sql = "UPDATE Cliente SET 
+    $sql = "UPDATE cliente SET 
     nomec = '$nomec',
     nome = '$nome',
-    estado = '$estado'
+    estado = '$estado',
     senha = '$senha',
-    email = '$email',
+    email = '$email'
     WHERE id = $id";
+
+    echo $sql;
     $result = mysqli_query($con, $sql);
     if($result)
         echo "Dados atualizados";
